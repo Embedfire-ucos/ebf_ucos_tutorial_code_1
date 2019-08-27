@@ -1,5 +1,5 @@
 #include "os.h"
-#include "ARMCM3.h"
+#include "ARMCM7.h"
 
 
 
@@ -56,7 +56,7 @@ void  OS_CPU_SysTickInit (CPU_INT32U  cnts)
     CPU_REG_NVIC_ST_CTRL |= CPU_REG_NVIC_ST_CTRL_TICKINT;
 }
 
-#else /* 直接使用头文件ARMCM3.h里面现有的寄存器定义和函数来实现 */
+#else /* 直接使用头文件ARMCM7.h里面现有的寄存器定义和函数来实现 */
 void  OS_CPU_SysTickInit (CPU_INT32U  ms)
 {
 	/* 设置重装载寄存器的值 */
